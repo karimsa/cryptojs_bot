@@ -12,7 +12,11 @@ const T = new (require('twit'))(require('rc')('twitter'))
 T.stream('statuses/filter', {
   track: '@cryptojs_bot',
   language: 'en'
-}).on('tweet', ({ id_str: id, user: { screen_name: user }, text: text }) => {
+}).on('tweet', tweet => {
+  const id = tweet.id_str
+      , user = tweet.user.screen_name
+      , text = tweet.text
+
   text = text.split(/\s+/).slice(1)
   text[0] = text[0].toLowerCase()
 
