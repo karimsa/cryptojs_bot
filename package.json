@@ -1,0 +1,30 @@
+{
+  "name": "cryptojs_bot",
+  "version": "0.0.1",
+  "description": "A Twitter bot to access node-crypto via tweets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karimsa/cryptojs_bot.git"
+  },
+  "keywords": [
+    "crypto",
+    "bot",
+    "crypto"
+  ],
+  "author": "Karim Alibhai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karimsa/cryptojs_bot/issues"
+  },
+  "homepage": "https://github.com/karimsa/cryptojs_bot#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "map-stream": "0.0.6",
+    "rc": "^1.1.6",
+    "twit": "^2.2.4"
+  }
+}
