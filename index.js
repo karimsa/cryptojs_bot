@@ -5,7 +5,7 @@
 
 'use strict';
 
-const T = new (require('twit'))(require('rc')('twitter'))
+const T = new (require('twit'))(require('./lib/auth'))
     , chalk = require('chalk')
     , methods = require('./lib/methods')
 
@@ -23,7 +23,7 @@ T.get('account/verify_credentials', { skip_status: true })
           , user = tweet.user.screen_name
           , text = tweet.text.split(/\s+/).slice(1)
           , method = text[0].toLowerCase()
-        
+
       try {
         if (methods.hasOwnProperty(method)) {
           console.log(chalk.green(`${chalk.bold('@' + user)} => ${method}(${text.slice(1).join(', ')})`))
